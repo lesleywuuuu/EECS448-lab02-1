@@ -124,10 +124,10 @@ bool LinkedList<T>::removeBack()
 	{
 		lastNode = m_front;
 
-		while(lastNode->getNext()&&lastNode->getNext()->getNext()!=nullptr)
+		while(lastNode->getNext()!=nullptr)
 		{
-				secondintoLast = lastNode;
-				lastNode = lastNode->getNext();
+			secondintoLast = lastNode;
+			lastNode = lastNode->getNext();
 		}
 		
 		delete lastNode;
